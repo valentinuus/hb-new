@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>НАЗВАНИЕ САЙТА</title>
+    <title>BllB Production</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="Организация и проведение онлайн трансляций в Санкт-Петербурге">
     <meta name="keywords" content="">
-    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="telephone=no"><link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+<link rel="manifest" href="img/favicon/site.webmanifest">
     <link rel="stylesheet" type="text/css" href="css/libs/swiper-bundle.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
   </head>
@@ -18,10 +19,10 @@
             <div class="header__logo"><a href="#">BllB</a></div>
             <nav class="nav" data-nav>
               <ul>
-                <li><a href="#">оборудование</a></li>
-                <li><a href="#">портфолио</a></li>
-                <li><a href="#">faq</a></li>
-                <li><a href="#">контакты</a></li>
+                <li><a href="#portfolio">портфолио</a></li>
+                <li><a href="#equipment">оборудование</a></li>
+                <li><a href="#faq">faq</a></li>
+                <li><a href="#contacts">контакты</a></li>
               </ul>
             </nav>
             <button class="burger" data-burger aria-label="Открыть меню" aria-expanded="false"><span class="burger__line"></span></button>
@@ -34,7 +35,7 @@
           <div class="about__wrap _container">
             <h1 class="about__title title-page">BllB PRODUCTION</h1>
             <div class="about__content">
-              <p class="about__text">Более 10 лет организуем и проводим онлайн-трансляции в Санкт-Петербурге</p><a class="about__link link-section" href="#">связаться</a>
+              <p class="about__text">Более 10 лет организуем и проводим онлайн-трансляции в Санкт-Петербурге</p><a class="about__link link-section" href="#contacts">связаться</a>
             </div>
           </div>
         </section>
@@ -107,9 +108,9 @@
             </div>
           </div>
         </section>
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
           <div class="portfolio__wrap _container">
-            <h2 class="portfolio__title title-page title-page_second">ПОРТФОЛИО <span>02</span></h2>
+            <h2 class="portfolio__title title-page title-page_second">ПОРТФОЛИО <span>01</span></h2>
             <ul class="portfolio__filter-list filter-list">
               <li class="filter-list__item">
                 <button class="filter-list__btn" data-filter="*">все</button>
@@ -126,7 +127,7 @@
             </ul>
             <div class="grid">
               <div class="product grid__item online">
-                <div class="grid__item-img"><img src="img/gallery/gcp.jpg" alt="online"></div>
+                <div class="grid__item-img"><img src="img/gallery/online.jpg" alt="online"></div>
                 <div class="grid__item-text-block"> 
                   <div class="grid__item-title">Студфест</div>
                   <div class="grid__item-text">A text for a new post. Add text here as a discription. It will be shown only in the description of a news card.</div>
@@ -137,7 +138,7 @@
                 </div>
               </div>
               <div class="product grid__item offline">
-                <div class="grid__item-img"><img src="img/gallery/gcp.jpg" alt="offline"></div>
+                <div class="grid__item-img"><img src="img/gallery/offline.jpg" alt="offline"></div>
                 <div class="grid__item-text-block"> 
                   <div class="grid__item-title">Корпоратив Advisability</div>
                   <div class="grid__item-text">This is a field to be filled it with a  description right under the headline. Use a short text to expand the meaning of your title</div>
@@ -148,7 +149,7 @@
                 </div>
               </div>
               <div class="product grid__item all">
-                <div class="grid__item-img"><img src="img/gallery/gcp.jpg" alt="offline online"></div>
+                <div class="grid__item-img"><img src="img/gallery/offline-online.jpg" alt="offline online"></div>
                 <div class="grid__item-text-block"> 
                   <div class="grid__item-title">День спасения</div>
                   <div class="grid__item-text">Fill in description field and start your stories. This text will be shown as a description in a blog card in the newsfeed</div>
@@ -165,7 +166,7 @@
           <div class="advantages__wrap _container">
             <div class="advantages__block advantages__block_big">
               <div class="advantages__block-title advantages__block-title_lg">8 лет</div>
-              <div class="advantages__block-descr">организуем и проводим онлайн-трансляции</div>
+              <div class="advantages__block-descr advantages__block-descr_first">организуем и проводим онлайн-трансляции</div>
             </div>
             <div class="advantages__block advantages__block_lg">
               <div class="advantages__block-title advantages__block-title_lg">15</div>
@@ -187,33 +188,31 @@
         </section>
         <section class="algorithm">
           <div class="algorithm__wrap _container">
-            <h2 class="portfolio__title title-page title-page_second title-page_multiline">КАК МЫ РАБОТАЕМ <span>03</span></h2>
+            <h2 class="portfolio__title title-page title-page_second title-page_multiline">КАК МЫ <br> РАБОТАЕМ <span>02</span></h2>
             <div class="algorithm__list"> 
-              <div class="algorithm__item"> 
-                <div class="algorithm__blok_element-first">
-                  <div class="algorithm__text">In many examples, the group to which the object belongs is immediately distinguished visually, but this is not always the case.</div>
-                  <div class="algorithm__img"><img src="img/gallery/gcp.jpg" alt=""></div>
-                </div>
-                <div class="algorithm__title">ШАГ 1</div>
+              <div class="algorithm__item">
+                <div class="algorithm__text algorithm__text_first">Расскажите нам о вашем мероприятии: формат, продолжительность, предполагаемое количество участников, в какой срок нужно организовать трансляцию. Укажите все важные детали. Мы составляем предварительную смету и отдаем вам на утверждение. </div>
+                <div class="algorithm__img algorithm__img_first"><img src="img/gallery/gal_02.jpg" alt=""></div>
+                <div class="algorithm__title algorithm__title_first">ШАГ 1</div>
               </div>
-              <div class="algorithm__item"> 
-                <div class="algorithm__img algorithm__img_second"><img src="img/gallery/gcp.jpg" alt=""></div>
-                <div class="algorithm__blok_element algorithm__blok_element_second">
+              <div class="algorithm__item algorithm__item_second"> 
+                <div class="algorithm__img algorithm__img_second"><img src="img/gallery/dj.jpg" alt=""></div>
+                <div class="algorithm__blok">
                   <div class="algorithm__title algorithm__title_second">ШАГ 2</div>
-                  <div class="algorithm__text">The fritware of the Islamic world does not use clay, so technically falls outside these groups. Historic pottery of all these types is often grouped as either fine wares, relatively expensive and well-made, and following the aesthetic taste of the culture.</div>
+                  <div class="algorithm__text">Мы выезжаем на площадку и определяем технические возможности локации. Обсуждаем сценарий, эфирную графику, составляем список необходимого оборудования и формируем команду специалистов. Выбираем площадку эфира (VK, YT, платные)</div>
                 </div>
               </div>
-              <div class="algorithm__item algorithm__item_wrap">
-                <div class="algorithm__text algorithm__text_third">Because unglazed biscuit earthenware is porous, it has limited utility for the storage of liquids or as tableware. However, earthenware has had a continuous history from the Neolithic period to today. It can be made from a wide variety of clays.</div>
+              <div class="algorithm__item algorithm__item_third">
+                <div class="algorithm__text algorithm__text_third">Монтируем оборудование, проводим технический прогон (при необходимости репетицию) и обеспечиваем бесперебойный эфир. В течение 3-5 дней передаем запись эфира.</div>
                 <div class="algorithm__title">ШАГ 3</div>
-                <div class="algorithm__img algorithm__img_third"><img src="img/gallery/gcp.jpg" alt=""></div>
+                <div class="algorithm__img algorithm__img_third"><img src="img/gallery/offline-online.jpg" alt=""></div>
               </div>
             </div>
           </div>
         </section>
-        <section class="equipment">
+        <section class="equipment" id="equipment">
           <div class="equipment__wrap _container">
-            <h3 class="title-page title-page_second">Оборудование <span>01</span></h3>
+            <h3 class="title-page title-page_second title-page_equipment">Оборудование <span>03</span></h3>
             <div class="equipment__item equipment-item">
               <div class="equipment-item__number">01</div>
               <div class="equipment-item__data">
@@ -237,7 +236,7 @@
             </div>
           </div>
         </section>
-        <section class="faq"> 
+        <section class="faq" id="faq"> 
           <div class="faq__wrap _container">
             <h4 class="title-page title-page_second">FAQ <span>04</span></h4>
             <div class="faq__block">
@@ -281,7 +280,7 @@
           </div>
         </section>
       </main>
-      <footer class="footer">
+      <footer class="footer" id="contacts">
         <div class="footer__wrap _container">
           <h4 class="title-page title-page_second">БУДЕМ ТВОРИТЬ<span>05</span></h4>
           <div class="contacts__content-block">
