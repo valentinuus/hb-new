@@ -17,21 +17,25 @@ testWebP(function (support) {
 
 // бургер меню
 const burger = document.querySelector('[data-burger]');
-const nav = document.querySelector('[data-nav]');
+const menu = document.querySelector('[data-menu]');
 const body = document.body;
-const navItems = nav.querySelectorAll('a');
+const closeMenu = document.querySelector('[data-burger-close]')
+const navItems = document.querySelector('.menu').querySelectorAll('a');
 
 burger.addEventListener('click', () => {
-	body.classList.toggle('stop--scroll')
-	burger.classList.toggle('burger--active');
-	nav.classList.toggle('nav--visible');
+	body.classList.toggle('stop--scroll');
+	menu.classList.toggle('menu--visible');
 });
+
+closeMenu.addEventListener('click', () =>{
+	body.classList.remove('stop--scroll');
+	menu.classList.remove('menu--visible');
+})
 
 navItems.forEach(el => {
 	el.addEventListener('click', () => {
-		body.classList.remove('stop--scroll')
-		burger.classList.remove('burger--active');
-		nav.classList.remove('nav--visible');
+		body.classList.remove('stop--scroll');
+		menu.classList.remove('menu--visible');
 	});
 });
 // бургер меню
