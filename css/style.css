@@ -304,6 +304,23 @@ h5 {
   overflow: hidden;
 }
 
+._container_header {
+  position: relative;
+}
+
+.show--menu {
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  max-width: 1160px;
+  width: 100%;
+  z-index: 100;
+  padding: 0 15px;
+  background-color: #000;
+}
+
 .title-page {
   font-family: "Kharkiv";
   letter-spacing: 1.5px;
@@ -1366,7 +1383,8 @@ h5 {
 
   .burger {
     display: block;
-    position: relative;
+    position: fixed;
+    right: 15px;
     z-index: 5;
     width: 50px;
     height: 50px;
@@ -1421,6 +1439,10 @@ h5 {
     right: 17px;
   }
 
+  .menu a {
+    z-index: 105;
+  }
+
   .menu {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1473,6 +1495,7 @@ h5 {
   }
 
   .nav__link {
+    z-index: 110;
     font-size: 24px;
     font-weight: 400;
   }
@@ -1507,6 +1530,7 @@ h5 {
   }
 
   .menu__action-link {
+    z-index: 110;
     padding: 20px 40px;
     color: #fff;
     border: #fff solid 1px;
@@ -1542,6 +1566,14 @@ h5 {
     width: 25px;
     height: 3px;
     background-color: #fff;
+  }
+
+  .show--menu {
+    background-color: transparent;
+  }
+
+  .show--menu .header__logo {
+    display: none;
   }
 
   .title-page_second::after {

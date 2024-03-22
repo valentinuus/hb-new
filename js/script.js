@@ -27,7 +27,7 @@ burger.addEventListener('click', () => {
 	menu.classList.toggle('menu--visible');
 });
 
-closeMenu.addEventListener('click', () =>{
+closeMenu.addEventListener('click', () => {
 	body.classList.remove('stop--scroll');
 	menu.classList.remove('menu--visible');
 })
@@ -35,37 +35,24 @@ closeMenu.addEventListener('click', () =>{
 navItems.forEach(el => {
 	el.addEventListener('click', () => {
 		body.classList.remove('stop--scroll');
-		menu.classList.remove('menu--visible');
+		menu?.classList.remove('menu--visible');
 	});
 });
+
+
+
+window.addEventListener('scroll', function () {
+	document
+		.querySelector('.header__content')
+		.classList.toggle('show--menu', window.scrollY > 1600);
+});
+
+
+
+
 // бургер меню
 
-// // аккаордион
-// document.addEventListener('DOMContentLoaded', () => {
-// 	const accordions = document.querySelectorAll('.accordion');
 
-// 	accordions.forEach(el => {
-// 		el.addEventListener('click', (e) => {
-// 			const self = e.currentTarget;
-// 			const control = self.querySelector('.accordion__control');
-// 			const content = self.querySelector('.accordion__content');
-
-// 			self.classList.toggle('open');
-
-// 			// если открыт аккордеон
-// 			if (self.classList.contains('open')) {
-// 				control.setAttribute('aria-expanded', true);
-// 				content.setAttribute('aria-hidden', false);
-// 				content.style.maxHeight = content.scrollHeight + 'px';
-// 			} else {
-// 				control.setAttribute('aria-expanded', false);
-// 				content.setAttribute('aria-hidden', true);
-// 				content.style.maxHeight = null;
-// 			}
-// 		});
-// 	});
-// });
-// // аккаордион
 
 const priceWithoutSpaces = (str) => {
 	return str.replace(/\s/g, '');
@@ -73,7 +60,6 @@ const priceWithoutSpaces = (str) => {
 
 const elem = document.querySelector('.grid');
 const iso = new Isotope(elem, {
-	// options
 	itemSelector: '.product',
 	layoutMode: 'masonry',
 });
@@ -158,9 +144,6 @@ const accordion5 = new GraphAccordion('.accordion-5', {
 const accordion6 = new GraphAccordion('.accordion-6', {
 });
 
-
-
-console.log('Init!');
 
 // inputmask
 const form = document.querySelector('.form');
