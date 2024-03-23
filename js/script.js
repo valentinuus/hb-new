@@ -15,7 +15,7 @@ testWebP(function (support) {
 });
 // testWebP
 
-// бургер меню
+// меню
 const burger = document.querySelector('[data-burger]');
 const menu = document.querySelector('[data-menu]');
 const body = document.body;
@@ -23,66 +23,34 @@ const closeMenu = document.querySelector('[data-burger-close]')
 const navItems = document.querySelector('.menu').querySelectorAll('a');
 
 burger.addEventListener('click', () => {
-	body.classList.toggle('stop--scroll');
+	// body.classList.toggle('stop--scroll');
 	menu.classList.toggle('menu--visible');
 });
 
 closeMenu.addEventListener('click', () => {
-	body.classList.remove('stop--scroll');
+	// body.classList.remove('stop--scroll');
 	menu.classList.remove('menu--visible');
 })
 
 navItems.forEach(el => {
 	el.addEventListener('click', () => {
-		body.classList.remove('stop--scroll');
+		// body.classList.remove('stop--scroll');
 		menu?.classList.remove('menu--visible');
 	});
 });
 
 
 
-window.addEventListener('scroll', function () {
-	document
-		.querySelector('.header__content')
-		.classList.toggle('show--menu', window.scrollY > 1600);
-});
+// появление при скролле
 
+// window.addEventListener('scroll', function () {
+// 	document
+// 		.querySelector('.header__content')
+// 		.classList.toggle('show--menu', window.scrollY > 1600);
+// });
+// меню
 
-
-
-// бургер меню
-
-
-
-const priceWithoutSpaces = (str) => {
-	return str.replace(/\s/g, '');
-};
-
-const elem = document.querySelector('.grid');
-const iso = new Isotope(elem, {
-	itemSelector: '.product',
-	layoutMode: 'masonry',
-});
-
-
-
-document.querySelectorAll('.filter-list__btn').forEach(el => {
-	el.addEventListener('click', (e) => {
-		let filter = e.currentTarget.dataset.filter;
-		iso.arrange({ filter: `${filter}` });
-	});
-});
-
-document.querySelectorAll('.sort-btn').forEach(el => {
-	el.addEventListener('click', (e) => {
-		let sortBy = e.currentTarget.getAttribute('data-sort');
-		iso.arrange({ sortBy: `${sortBy}` });
-	});
-});
-
-
-
-
+//accordion
 class GraphAccordion {
 	constructor(selector, options) {
 		let defaultOptions = {
@@ -130,7 +98,6 @@ class GraphAccordion {
 		this.options.isClose(this);
 	}
 }
-
 const accordion1 = new GraphAccordion('.accordion-1', {
 });
 const accordion2 = new GraphAccordion('.accordion-2', {
@@ -143,7 +110,7 @@ const accordion5 = new GraphAccordion('.accordion-5', {
 });
 const accordion6 = new GraphAccordion('.accordion-6', {
 });
-
+//accordion
 
 // inputmask
 const form = document.querySelector('.form');
@@ -190,3 +157,5 @@ validation
 
 		event.target.reset();
 	});
+
+	// inputmask
