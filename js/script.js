@@ -43,11 +43,11 @@ navItems.forEach(el => {
 
 // появление при скролле
 
-// window.addEventListener('scroll', function () {
-// 	document
-// 		.querySelector('.header__content')
-// 		.classList.toggle('show--menu', window.scrollY > 1600);
-// });
+window.addEventListener('scroll', function () {
+	document
+		.querySelector('.header__content')
+		.classList.toggle('show--menu', window.scrollY > 1600);
+});
 // меню
 
 //accordion
