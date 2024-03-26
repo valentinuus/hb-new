@@ -40,9 +40,7 @@ navItems.forEach(el => {
 });
 
 
-
 // появление при скролле
-
 window.addEventListener('scroll', function () {
 	document
 		.querySelector('.header__content')
@@ -137,13 +135,9 @@ validation
 		},
 	]).onSuccess((event) => {
 		console.log('Validation passes and form submitted', event);
-
 		let formData = new FormData(event.target);
-
 		console.log(...formData);
-
 		let xhr = new XMLHttpRequest();
-
 		xhr.onreadystatechange = function () {
 			if (xhr.readyState === 4) {
 				if (xhr.status === 200) {
@@ -151,11 +145,26 @@ validation
 				}
 			}
 		}
-
 		xhr.open('POST', 'mail.php', true);
 		xhr.send(formData);
-
 		event.target.reset();
 	});
 
-	// inputmask
+// inputmask
+
+
+// фильтр
+const elem = document.querySelector('.grid');
+const iso = new Isotope(elem, {
+	// options
+	itemSelector: '.product',
+	layoutMode: 'masonry',
+});
+
+document.querySelectorAll('.filter-list__btn').forEach(el => {
+	el.addEventListener('click', (e) => {
+		let filter = e.currentTarget.dataset.filter;
+		iso.arrange({ filter: `${filter}` });
+	});
+});
+// фильтр
